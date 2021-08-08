@@ -1,0 +1,242 @@
+$grid-breakpoints-sm: (
+  sm: 375px,
+);
+
+$light: hsl(0, 0%, 100%);
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+body {
+  font-family: "Fraunces";
+  font-size: 18px;
+}
+
+.navcont {
+  background-image: url(../images/desktop/image-header.jpg);
+  background-size: cover;
+  background-position: center;
+
+  height: 100vh;
+
+  .navbar-expand-sm {
+    .navbar-brand {
+      font-weight: 900;
+      font-size: 30px;
+    }
+    .nav-item {
+      .nav-link {
+        color: hsl(0, 0%, 100%);
+      }
+    }
+    .btn {
+      border-radius: 200px;
+      border: 0;
+      background-color: hsl(0, 0%, 100%);
+      color: hsl(212, 27%, 19%);
+    }
+    .btn:hover {
+      color: hsl(0, 0%, 100%);
+      background-color: rgb(121, 204, 240);
+    }
+  }
+  h2 {
+    color: hsl(0, 0%, 100%);
+    word-spacing: 4px;
+    letter-spacing: 8px;
+    top: 110px;
+  }
+  svg {
+    top: 200px;
+  }
+}
+
+.mygrid {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  .eggside {
+    .eggtext {
+      box-sizing: border-box;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      line-height: 30px;
+      h2 {
+        color: hsl(212, 27%, 19%);
+      }
+      p {
+        color: hsl(232, 10%, 55%);
+        font-family: Barlow;
+      }
+      a {
+        z-index: 2000;
+      }
+      .underline {
+        background-color: hsl(51, 100%, 49%);
+        width: 145px;
+        height: 8px;
+        border-radius: 200px;
+        bottom: 30px;
+      }
+    }
+  }
+  .egg {
+    background-image: url(../images/desktop/image-transform.jpg);
+    background-size: cover;
+  }
+  .glass {
+    background-image: url(../images/desktop/image-stand-out.jpg);
+    background-size: cover;
+  }
+
+  .glasstext {
+    box-sizing: border-box;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    h2 {
+      color: hsl(212, 27%, 19%);
+    }
+    p {
+      color: hsl(232, 10%, 55%);
+      font-family: "Barlow";
+    }
+    a {
+      z-index: 2000;
+    }
+    .underline {
+      background-color: hsl(7, 99%, 70%);
+      width: 145px;
+      height: 8px;
+      border-radius: 200px;
+      bottom: 30px;
+    }
+  }
+
+  .red1 {
+    background-image: url(../images/desktop/image-graphic-design.jpg);
+    background-size: cover;
+    box-sizing: border-box;
+    height: 600px;
+    .redtext {
+      top: 70%;
+
+      h2 {
+        color: hsl(167, 40%, 24%);
+      }
+      p {
+        color: hsl(167, 40%, 24%);
+        font-family: "Barlow";
+        font-size: 20px;
+      }
+    }
+  }
+  .orange1 {
+    background-image: url(../images/desktop/image-photography.jpg);
+    background-size: cover;
+    box-sizing: border-box;
+    .orangetext {
+      top: 70%;
+
+      h2 {
+        color: hsl(198, 62%, 26%);
+      }
+      p {
+        color: hsl(198, 62%, 26%);
+        font-family: "Barlow";
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.testimonials {
+  .testimonial-header {
+    color: hsl(210, 4%, 67%);
+    letter-spacing: 2px;
+  }
+  .clients {
+    font-family: "Barlow";
+    gap: 60px;
+    img {
+      width: 75px;
+      height: 75px;
+    }
+    .feedback {
+      color: hsl(232, 10%, 55%);
+    }
+    .clientName {
+      font-family: "Fraunces";
+      font-weight: 700;
+    }
+    .role {
+      color: hsl(210, 4%, 67%);
+    }
+  }
+}
+
+.images {
+  font-size: 0;
+  .image {
+    width: 25%;
+    height: 400px;
+  }
+}
+
+.mobile {
+  font-size: 0;
+}
+.image {
+  width: 50%;
+}
+footer {
+  background-color: hsl(168, 38%, 65%);
+  color: hsl(167, 40%, 24%);
+  a {
+    font-family: "Barlow";
+    color: hsl(168, 34%, 41%);
+    display: inline-block;
+  }
+}
+
+@media (max-width: 576px) {
+  .navcont {
+    background-image: url(../images/mobile/image-header.jpg);
+    background-position: bottom;
+    height: 60vh;
+    h2 {
+      top: 90px;
+    }
+    svg {
+      top: 120px;
+    }
+  }
+  .mygrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1.5fr 1.5fr;
+
+    .egg {
+      background-image: url(../images/mobile/image-transform.jpg);
+      background-position: center;
+      order: -1;
+    }
+    .glass {
+      background-image: url(../images/mobile/image-stand-out.jpg);
+      background-position: center;
+    }
+    .red1 {
+      background-image: url(../images/mobile/image-graphic-design.jpg);
+    }
+    .orange1 {
+      background-image: url(../images/mobile/image-photography.jpg);
+    }
+  }
+  .clients {
+    flex-wrap: wrap;
+    .client1,
+    .client1,
+    .client3 {
+      width: 100%;
+    }
+  }
+}
